@@ -1,0 +1,26 @@
+PODS:
+  - Masonry (1.1.0)
+  - ReactiveObjC (3.1.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Masonry
+  - ReactiveObjC
+  - YYKit
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - ReactiveObjC
+    - YYKit
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 40ba0554b7a0533c481abcd4a68131ad15c878b4
+
+COCOAPODS: 1.9.0
