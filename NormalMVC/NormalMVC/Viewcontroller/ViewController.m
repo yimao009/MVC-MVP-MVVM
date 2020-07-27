@@ -12,7 +12,7 @@
 #import "MainView.h"
 #import "MVTableViewCell.h"
 #import <NSObject+YYModel.h>
-
+#import <Masonry.h>
 static NSString *const reuserId = @"reuserId";
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, MainViewDelegate>
@@ -29,10 +29,74 @@ static NSString *const reuserId = @"reuserId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
-    [self.view addSubview:self.tableView];
+//    [self loadData];
+//    [self.view addSubview:self.tableView];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationSAVE) name:@"saveSucessful" object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationSAVE) name:@"saveSucessful" object:nil];
+//    [self testContentHugging];
+    [self testMasonryConstraints];
+}
+
+// 制造冲突
+- (void)testMasonryConstraints
+{
+    UIView *v1 = [UIView new];
+    v1.backgroundColor = [UIColor redColor];
+    MASAttachKeys(v1);
+//    v1.mas_key = @"guoruize";
+    [self.view addSubview:v1];
+    [v1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.offset(20);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+    }];
+    
+    [v1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.offset(60);
+        make.size.mas_equalTo(CGSizeMake(70, 90));
+    }];
+    
+}
+
+// 练习Content Hugging 和 Content Compression Resistance
+- (void)testContentHugging
+{
+    // Conteng Hugging
+    // 表示抗被拉伸的优先级 默认250 优先级越高 越不容易被拉伸
+    // Content Compression
+    // 抗压缩 优先级越高 越不容易压缩 默认750
+    
+    // 练习
+    /**
+     如果你想去练习一下，我建议你用自动布局去实现一下新浪微博首页的Cell，或者微信朋友圈的Cell。
+     */
+    UILabel* leftLabel = [[UILabel alloc] init];
+    leftLabel.backgroundColor = [UIColor redColor];
+    [self.view addSubview:leftLabel];
+    leftLabel.text = @"人做的畜生之事越多，内心越是痛苦。床前明月光";
+    [leftLabel sizeToFit];
+    
+    UILabel* rightLabel = [[UILabel alloc] init];
+    rightLabel.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:rightLabel];
+    rightLabel.text = @"1234567890";
+    [rightLabel sizeToFit];
+    
+    [leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(20));
+        make.left.equalTo(self.view).offset(10);
+        make.centerY.equalTo(self.view);
+        make.right.mas_lessThanOrEqualTo(rightLabel.mas_left);
+    }];
+    
+    [rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(20));
+        make.left.mas_greaterThanOrEqualTo(leftLabel.mas_right);
+        make.right.equalTo(self.view).offset(-10);
+        make.centerY.equalTo(leftLabel);
+    }];
+    
+    [leftLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
 }
 
 - (void)dealloc
