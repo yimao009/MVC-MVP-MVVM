@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06268B7924D65C540071F039 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06268B7824D65C540071F039 /* CameraViewController.m */; };
+		06268B7B24D65DE10071F039 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06268B7A24D65DE10071F039 /* CameraViewController.xib */; };
 		062C2F1A249FB680007E6444 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F16249FB680007E6444 /* Model.m */; };
 		062C2F1B249FB680007E6444 /* MModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F18249FB680007E6444 /* MModel.m */; };
 		062C2F20249FB689007E6444 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F1D249FB689007E6444 /* MainView.m */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06268B7724D65C540071F039 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		06268B7824D65C540071F039 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		06268B7A24D65DE10071F039 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		062C2F15249FB680007E6444 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		062C2F16249FB680007E6444 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		062C2F17249FB680007E6444 /* MModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MModel.h; sourceTree = "<group>"; };
@@ -72,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06268B7624D65B300071F039 /* CameraPhtoto */ = {
+			isa = PBXGroup;
+			children = (
+				06268B7724D65C540071F039 /* CameraViewController.h */,
+				06268B7824D65C540071F039 /* CameraViewController.m */,
+				06268B7A24D65DE10071F039 /* CameraViewController.xib */,
+			);
+			path = CameraPhtoto;
+			sourceTree = "<group>";
+		};
 		06C32920249A0377009D9337 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,7 @@
 		06C3292B249A0377009D9337 /* StandMVC */ = {
 			isa = PBXGroup;
 			children = (
+				06268B7624D65B300071F039 /* CameraPhtoto */,
 				06C32947249A108F009D9337 /* controller */,
 				06C32946249A1089009D9337 /* view */,
 				06C32945249A1080009D9337 /* model */,
@@ -228,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06C3293C249A037A009D9337 /* LaunchScreen.storyboard in Resources */,
+				06268B7B24D65DE10071F039 /* CameraViewController.xib in Resources */,
 				06C32939249A037A009D9337 /* Assets.xcassets in Resources */,
 				06C32937249A0377009D9337 /* Main.storyboard in Resources */,
 			);
@@ -310,6 +327,7 @@
 				06C3292E249A0377009D9337 /* AppDelegate.m in Sources */,
 				A9287F2E24CE6C3F008BF495 /* CustomViewController.m in Sources */,
 				069CFAF024C48FC50096920A /* ToDoListViewController.m in Sources */,
+				06268B7924D65C540071F039 /* CameraViewController.m in Sources */,
 				06C3293F249A037A009D9337 /* main.m in Sources */,
 				06C32931249A0377009D9337 /* SceneDelegate.m in Sources */,
 				062C2F1A249FB680007E6444 /* Model.m in Sources */,
@@ -455,14 +473,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRKXZYST8H;
+				DEVELOPMENT_TEAM = VQF2D34SJB;
 				INFOPLIST_FILE = StandMVC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zbj.StandMVC222;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exam.StandMVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

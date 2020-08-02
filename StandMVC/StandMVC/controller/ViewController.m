@@ -98,6 +98,15 @@ static NSString *const reuserId = @"reuserId";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Model *m = self.dataArray[indexPath.row];
+    if (m.VC != nil && m.VC.length != 0) {
+        UIViewController *vc = [[NSClassFromString(m.VC) alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
 - (void)setCell:(MVTableViewCell *)cell data:(Model *)mdata indexPath:(NSIndexPath *)indexPath
 {
     cell.indexPath = indexPath;
