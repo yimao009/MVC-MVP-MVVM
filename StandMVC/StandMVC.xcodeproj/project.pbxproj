@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		06268B7924D65C540071F039 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06268B7824D65C540071F039 /* CameraViewController.m */; };
 		06268B7B24D65DE10071F039 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06268B7A24D65DE10071F039 /* CameraViewController.xib */; };
+		06268B7F24D6B4D60071F039 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06268B7E24D6B4D60071F039 /* MyCameraViewController.m */; };
+		06268B8324D6B4F90071F039 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06268B8224D6B4F90071F039 /* ShowImageViewController.m */; };
+		06268B8624D8C6360071F039 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06268B8524D8C6350071F039 /* TestViewController.m */; };
 		062C2F1A249FB680007E6444 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F16249FB680007E6444 /* Model.m */; };
 		062C2F1B249FB680007E6444 /* MModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F18249FB680007E6444 /* MModel.m */; };
 		062C2F20249FB689007E6444 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C2F1D249FB689007E6444 /* MainView.m */; };
@@ -31,6 +34,12 @@
 		06268B7724D65C540071F039 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		06268B7824D65C540071F039 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		06268B7A24D65DE10071F039 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		06268B7D24D6B4D60071F039 /* MyCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCameraViewController.h; sourceTree = "<group>"; };
+		06268B7E24D6B4D60071F039 /* MyCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCameraViewController.m; sourceTree = "<group>"; };
+		06268B8124D6B4F90071F039 /* ShowImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImageViewController.h; sourceTree = "<group>"; };
+		06268B8224D6B4F90071F039 /* ShowImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImageViewController.m; sourceTree = "<group>"; };
+		06268B8424D8C6350071F039 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		06268B8524D8C6350071F039 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		062C2F15249FB680007E6444 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		062C2F16249FB680007E6444 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		062C2F17249FB680007E6444 /* MModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MModel.h; sourceTree = "<group>"; };
@@ -87,6 +96,19 @@
 			path = CameraPhtoto;
 			sourceTree = "<group>";
 		};
+		06268B7C24D6A47C0071F039 /* CustomCamera */ = {
+			isa = PBXGroup;
+			children = (
+				06268B7D24D6B4D60071F039 /* MyCameraViewController.h */,
+				06268B7E24D6B4D60071F039 /* MyCameraViewController.m */,
+				06268B8424D8C6350071F039 /* TestViewController.h */,
+				06268B8524D8C6350071F039 /* TestViewController.m */,
+				06268B8124D6B4F90071F039 /* ShowImageViewController.h */,
+				06268B8224D6B4F90071F039 /* ShowImageViewController.m */,
+			);
+			path = CustomCamera;
+			sourceTree = "<group>";
+		};
 		06C32920249A0377009D9337 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +130,7 @@
 		06C3292B249A0377009D9337 /* StandMVC */ = {
 			isa = PBXGroup;
 			children = (
+				06268B7C24D6A47C0071F039 /* CustomCamera */,
 				06268B7624D65B300071F039 /* CameraPhtoto */,
 				06C32947249A108F009D9337 /* controller */,
 				06C32946249A1089009D9337 /* view */,
@@ -320,6 +343,7 @@
 			files = (
 				06C32934249A0377009D9337 /* ViewController.m in Sources */,
 				062C2F1B249FB680007E6444 /* MModel.m in Sources */,
+				06268B8324D6B4F90071F039 /* ShowImageViewController.m in Sources */,
 				069CFAF324C499C80096920A /* ToDoStore.m in Sources */,
 				062C2F21249FB689007E6444 /* MVTableViewCell.m in Sources */,
 				069CFAED24C48E860096920A /* ToDoItem.m in Sources */,
@@ -331,6 +355,8 @@
 				06C3293F249A037A009D9337 /* main.m in Sources */,
 				06C32931249A0377009D9337 /* SceneDelegate.m in Sources */,
 				062C2F1A249FB680007E6444 /* Model.m in Sources */,
+				06268B8624D8C6360071F039 /* TestViewController.m in Sources */,
+				06268B7F24D6B4D60071F039 /* MyCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
