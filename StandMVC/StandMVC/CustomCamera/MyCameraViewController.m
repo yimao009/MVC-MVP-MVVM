@@ -134,6 +134,7 @@
 
 - (AVCaptureDeviceInput *)deviceInputWithDevice:(AVCaptureDevice *)device
 {
+    [self setFlashModeForDevice:device];
     NSError *error = nil;
     AVCaptureDeviceInput *deviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&error];
     if (!deviceInput) {
@@ -157,6 +158,37 @@
     }
     return nil;
 }
+#pragma mark - flashMode
+- (void)setFlashMode:(AVCaptureFlashMode)flashMode
+{
+    if (_flashMode == flashMode) {
+        return;
+    }
+    _flashMode = flashMode;
+    [self setFlashModeForDevice:_deviceInput.device];
+}
+
+- (void)setFlashModeForDevice:(AVCaptureDevice *)device
+{
+    if(device.flashMode != _flashMode && [device isFlashModeSupported:_flashMode])
+    {
+        NSError *error = nil;
+        [device lockForConfiguration:&error];
+        if (!error) {
+            device.flashMode = _flashMode;
+        }
+        else
+        {
+            _flashMode = device.flashMode;
+        }
+        [device unlockForConfiguration];
+        
+    }
+    else
+    {
+         _flashMode = device.flashMode;
+    }
+}
 
 #pragma mark - Actions
 - (void)cancelAction:(id)sender
@@ -166,7 +198,18 @@
 
 - (void)takeAction:(id)sender
 {
-    
+    [self takePhoto:^(UIImage *image) {
+        [self performSelectorOnMainThread:@selector(takePhotoFinished:) withObject:image waitUntilDone:NO];
+    }];
+}
+
+- (void)takePhotoFinished:(UIImage *)img
+{
+//    UIImageWriteToSavedPhotosAlbum(img, self, <#SEL  _Nullable completionSelector#>, <#void * _Nullable contextInfo#>)
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cameraViewController:imageCaptured:)]) {
+        [self.delegate cameraViewController:self imageCaptured:img];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)switchAction:(id)sender
@@ -178,7 +221,15 @@
 {
     TestViewController *alert = [TestViewController alertControllerWithTitle:@"Flash Mode" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     void(^alertAction)(UIAlertAction *action) = ^(UIAlertAction *action) {
-        
+        if ([action.title isEqualToString:@"Off"]) {
+            self.flashMode = AVCaptureFlashModeOff;
+        }
+        if ([action.title isEqualToString:@"On"]) {
+            self.flashMode = AVCaptureFlashModeOn;
+        }
+        if ([action.title isEqualToString:@"Auto"]) {
+            self.flashMode = AVCaptureFlashModeAuto;
+        }
     };
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Off" style:UIAlertActionStyleDefault handler:alertAction];
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"On" style:UIAlertActionStyleDefault handler:alertAction];
@@ -187,8 +238,9 @@
     [alert addAction:action2];
     [alert addAction:action3];
     
+    __weak typeof(alert ) weakAlert = alert;
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [alert.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        [weakAlert.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }];
     [alert addAction:cancel];
     
@@ -269,6 +321,27 @@
     }
     
     return YES;
+}
+
+- (void)takePhoto:(void(^)(UIImage *image))finished
+{
+    if (!finished) {
+        return;
+    }
+    AVCaptureConnection *connection = [_imageOutPut connectionWithMediaType:AVMediaTypeVideo];
+    if (!connection) {
+        finished(nil);
+        return;
+    }
+    [_imageOutPut captureStillImageAsynchronouslyFromConnection:connection completionHandler:^(CMSampleBufferRef  _Nullable imageDataSampleBuffer, NSError * _Nullable error) {
+        if (imageDataSampleBuffer == NULL) {
+            finished(nil);
+            return;
+        }
+        NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        UIImage *img = [UIImage imageWithData:data];
+        finished(img);
+    }];
 }
 
 #pragma mark - preview
