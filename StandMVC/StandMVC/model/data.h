@@ -10,6 +10,7 @@
 #define data_inc_h
 @{@"name":@"本地相机相册调用",@"imageUrl":@"http://CC",@"num":@"9", @"VC":@"CameraViewController"},
 @{@"name":@"自定义相机使用",@"imageUrl":@"http://CC",@"num":@"9", @"VC":@"ShowImageViewController"},
+@{@"name":@"自定义相册",@"imageUrl":@"http://CC",@"num":@"9", @"VC":@"CustomAlbumViewController"},
 @{@"name":@"CadsC",@"imageUrl":@"http://CC",@"num":@"9"},
 @{@"name":@"Jadsfes",@"imageUrl":@"http://James",@"num":@"69"},
 @{@"name":@"Gadsfin",@"imageUrl":@"http://Gavin",@"num":@"22"},
