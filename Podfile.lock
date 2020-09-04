@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - KVOController (1.2.0)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - YYKit (1.0.9):
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - KVOController
   - Masonry
   - ReactiveObjC
   - YYKit
@@ -29,16 +31,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - KVOController
     - Masonry
     - ReactiveObjC
     - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 67e8e6fdad0ec3624624aef42c531343abc2eb70
+PODFILE CHECKSUM: fda1d89f86ab219aaa532a3edf6b27e9b4ccb215
 
 COCOAPODS: 1.9.3

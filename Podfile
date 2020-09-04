@@ -8,6 +8,7 @@ targetsArray.each do |t|
                 pod 'YYKit'
                 pod 'ReactiveObjC'
                 pod 'AFNetworking'
+                pod 'KVOController'
                 project "#{t}/#{t}.xcodeproj"
 #                pod 'Reveal-SDK', :configurations => ['Debug']
         end

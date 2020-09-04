@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06130F8524F1819200B22F19 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06130F8424F1819200B22F19 /* LoginViewModel.m */; };
+		06130F8924F185B600B22F19 /* GoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06130F8824F185B600B22F19 /* GoodsViewModel.m */; };
+		06130F9024F2189100B22F19 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06130F8E24F2189100B22F19 /* LoginViewController.m */; };
+		06130F9124F2189100B22F19 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06130F8F24F2189100B22F19 /* LoginViewController.xib */; };
+		06130F9424F21CFC00B22F19 /* LoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06130F9324F21CFC00B22F19 /* LoginInputView.m */; };
+		06130F9624F21D0300B22F19 /* LoginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06130F9524F21D0300B22F19 /* LoginInputView.xib */; };
 		06C32991249A18C7009D9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C32990249A18C7009D9337 /* AppDelegate.m */; };
 		06C32994249A18C7009D9337 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C32993249A18C7009D9337 /* SceneDelegate.m */; };
 		06C32997249A18C7009D9337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C32996249A18C7009D9337 /* ViewController.m */; };
@@ -37,6 +43,16 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		06130F8324F1819200B22F19 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		06130F8424F1819200B22F19 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		06130F8724F185B600B22F19 /* GoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsViewModel.h; sourceTree = "<group>"; };
+		06130F8824F185B600B22F19 /* GoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsViewModel.m; sourceTree = "<group>"; };
+		06130F8D24F2189100B22F19 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		06130F8E24F2189100B22F19 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		06130F8F24F2189100B22F19 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		06130F9224F21CFC00B22F19 /* LoginInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInputView.h; sourceTree = "<group>"; };
+		06130F9324F21CFC00B22F19 /* LoginInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInputView.m; sourceTree = "<group>"; };
+		06130F9524F21D0300B22F19 /* LoginInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginInputView.xib; sourceTree = "<group>"; };
 		06C3298C249A18C7009D9337 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C3298F249A18C7009D9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06C32990249A18C7009D9337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +96,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		06130F7F24F1813000B22F19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06130F8324F1819200B22F19 /* LoginViewModel.h */,
+				06130F8424F1819200B22F19 /* LoginViewModel.m */,
+				06130F8724F185B600B22F19 /* GoodsViewModel.h */,
+				06130F8824F185B600B22F19 /* GoodsViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		06130F8624F1854F00B22F19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06130F8A24F217B600B22F19 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06130F8C24F217E100B22F19 /* Home */,
+				06130F8B24F217DB00B22F19 /* Login */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		06130F8B24F217DB00B22F19 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				06130F8D24F2189100B22F19 /* LoginViewController.h */,
+				06130F8E24F2189100B22F19 /* LoginViewController.m */,
+				06130F8F24F2189100B22F19 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		06130F8C24F217E100B22F19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		06C32983249A18C6009D9337 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +161,9 @@
 		06C3298E249A18C7009D9337 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				06130F8A24F217B600B22F19 /* ViewController */,
+				06130F8624F1854F00B22F19 /* Model */,
+				06130F7F24F1813000B22F19 /* ViewModel */,
 				06DC6A0B24BAB8C70040E4BB /* Home */,
 				06C3298F249A18C7009D9337 /* AppDelegate.h */,
 				06C32990249A18C7009D9337 /* AppDelegate.m */,
@@ -126,6 +189,9 @@
 				06DC6A1024BAB9000040E4BB /* MVVMViewModel.m */,
 				06DC6A1224BAFB880040E4BB /* MVVMView.h */,
 				06DC6A1324BAFB880040E4BB /* MVVMView.m */,
+				06130F9224F21CFC00B22F19 /* LoginInputView.h */,
+				06130F9324F21CFC00B22F19 /* LoginInputView.m */,
+				06130F9524F21D0300B22F19 /* LoginInputView.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -199,6 +265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06130F9124F2189100B22F19 /* LoginViewController.xib in Resources */,
+				06130F9624F21D0300B22F19 /* LoginInputView.xib in Resources */,
 				06C3299F249A18CA009D9337 /* LaunchScreen.storyboard in Resources */,
 				06C3299C249A18CA009D9337 /* Assets.xcassets in Resources */,
 				06C3299A249A18C7009D9337 /* Main.storyboard in Resources */,
@@ -237,11 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06130F8524F1819200B22F19 /* LoginViewModel.m in Sources */,
+				06130F9424F21CFC00B22F19 /* LoginInputView.m in Sources */,
 				06C32997249A18C7009D9337 /* ViewController.m in Sources */,
 				06C32991249A18C7009D9337 /* AppDelegate.m in Sources */,
 				06DC6A1124BAB9000040E4BB /* MVVMViewModel.m in Sources */,
+				06130F9024F2189100B22F19 /* LoginViewController.m in Sources */,
 				06C329A2249A18CA009D9337 /* main.m in Sources */,
 				06C32994249A18C7009D9337 /* SceneDelegate.m in Sources */,
+				06130F8924F185B600B22F19 /* GoodsViewModel.m in Sources */,
 				06DC6A1424BAFB880040E4BB /* MVVMView.m in Sources */,
 				06DC6A0E24BAB8E20040E4BB /* BaseViewModel.m in Sources */,
 			);

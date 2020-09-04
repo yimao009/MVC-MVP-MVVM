@@ -33,6 +33,11 @@
 		06C32939249A037A009D9337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06C32938249A037A009D9337 /* Assets.xcassets */; };
 		06C3293C249A037A009D9337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C3293A249A037A009D9337 /* LaunchScreen.storyboard */; };
 		06C3293F249A037A009D9337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C3293E249A037A009D9337 /* main.m */; };
+		06F3777124FB537E00DDBA2E /* WKWebViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F3776F24FB537E00DDBA2E /* WKWebViewDemoController.m */; };
+		06F3777224FB537E00DDBA2E /* WKWebViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F3777024FB537E00DDBA2E /* WKWebViewDemoController.xib */; };
+		06F3777624FB563200DDBA2E /* WKBaseUSEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F3777424FB563200DDBA2E /* WKBaseUSEViewController.m */; };
+		06F3777924FB6CDD00DDBA2E /* QiLink.html in Resources */ = {isa = PBXBuildFile; fileRef = 06F3777824FB6CDD00DDBA2E /* QiLink.html */; };
+		06F3777C24FB6D2F00DDBA2E /* QiWKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F3777B24FB6D2F00DDBA2E /* QiWKDetailViewController.m */; };
 		A9287F2E24CE6C3F008BF495 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9287F2D24CE6C3F008BF495 /* CustomViewController.m */; };
 		FA5E9CCC9DBA93B4328B758D /* libPods-StandMVC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E5821278A831C25E20903A /* libPods-StandMVC.a */; };
 /* End PBXBuildFile section */
@@ -88,6 +93,14 @@
 		06C3293B249A037A009D9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06C3293D249A037A009D9337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C3293E249A037A009D9337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06F3776E24FB537E00DDBA2E /* WKWebViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoController.h; sourceTree = "<group>"; };
+		06F3776F24FB537E00DDBA2E /* WKWebViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoController.m; sourceTree = "<group>"; };
+		06F3777024FB537E00DDBA2E /* WKWebViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKWebViewDemoController.xib; sourceTree = "<group>"; };
+		06F3777324FB563200DDBA2E /* WKBaseUSEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKBaseUSEViewController.h; sourceTree = "<group>"; };
+		06F3777424FB563200DDBA2E /* WKBaseUSEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKBaseUSEViewController.m; sourceTree = "<group>"; };
+		06F3777824FB6CDD00DDBA2E /* QiLink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = QiLink.html; sourceTree = "<group>"; };
+		06F3777A24FB6D2E00DDBA2E /* QiWKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiWKDetailViewController.h; sourceTree = "<group>"; };
+		06F3777B24FB6D2F00DDBA2E /* QiWKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiWKDetailViewController.m; sourceTree = "<group>"; };
 		37C68FA04A0D2476C68A8371 /* Pods-StandMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StandMVC.release.xcconfig"; path = "Target Support Files/Pods-StandMVC/Pods-StandMVC.release.xcconfig"; sourceTree = "<group>"; };
 		A9287F2C24CE6C3F008BF495 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		A9287F2D24CE6C3F008BF495 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
@@ -172,6 +185,7 @@
 		06C3292B249A0377009D9337 /* StandMVC */ = {
 			isa = PBXGroup;
 			children = (
+				06F3776D24FB535900DDBA2E /* WKWebView */,
 				06268B8724D9B2080071F039 /* CustomAlbum */,
 				06268B7C24D6A47C0071F039 /* CustomCamera */,
 				06268B7624D65B300071F039 /* CameraPhtoto */,
@@ -229,6 +243,21 @@
 				A9287F2D24CE6C3F008BF495 /* CustomViewController.m */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		06F3776D24FB535900DDBA2E /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				06F3777824FB6CDD00DDBA2E /* QiLink.html */,
+				06F3776E24FB537E00DDBA2E /* WKWebViewDemoController.h */,
+				06F3776F24FB537E00DDBA2E /* WKWebViewDemoController.m */,
+				06F3777024FB537E00DDBA2E /* WKWebViewDemoController.xib */,
+				06F3777324FB563200DDBA2E /* WKBaseUSEViewController.h */,
+				06F3777424FB563200DDBA2E /* WKBaseUSEViewController.m */,
+				06F3777A24FB6D2E00DDBA2E /* QiWKDetailViewController.h */,
+				06F3777B24FB6D2F00DDBA2E /* QiWKDetailViewController.m */,
+			);
+			path = WKWebView;
 			sourceTree = "<group>";
 		};
 		5B12C90984418B8319B23253 /* Pods */ = {
@@ -309,7 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F3777924FB6CDD00DDBA2E /* QiLink.html in Resources */,
 				06C3293C249A037A009D9337 /* LaunchScreen.storyboard in Resources */,
+				06F3777224FB537E00DDBA2E /* WKWebViewDemoController.xib in Resources */,
 				06268B7B24D65DE10071F039 /* CameraViewController.xib in Resources */,
 				06C32939249A037A009D9337 /* Assets.xcassets in Resources */,
 				06C32937249A0377009D9337 /* Main.storyboard in Resources */,
@@ -391,7 +422,9 @@
 				062C2F21249FB689007E6444 /* MVTableViewCell.m in Sources */,
 				069CFAED24C48E860096920A /* ToDoItem.m in Sources */,
 				062C2F20249FB689007E6444 /* MainView.m in Sources */,
+				06F3777624FB563200DDBA2E /* WKBaseUSEViewController.m in Sources */,
 				06C3292E249A0377009D9337 /* AppDelegate.m in Sources */,
+				06F3777124FB537E00DDBA2E /* WKWebViewDemoController.m in Sources */,
 				A9287F2E24CE6C3F008BF495 /* CustomViewController.m in Sources */,
 				069CFAF024C48FC50096920A /* ToDoListViewController.m in Sources */,
 				06268B8D24D9B2970071F039 /* MyImagePickerViewController.m in Sources */,
@@ -403,6 +436,7 @@
 				06C32931249A0377009D9337 /* SceneDelegate.m in Sources */,
 				06B7229824DFC02D001C9822 /* MyImagePreviewViewController.m in Sources */,
 				062C2F1A249FB680007E6444 /* Model.m in Sources */,
+				06F3777C24FB6D2F00DDBA2E /* QiWKDetailViewController.m in Sources */,
 				06268B8624D8C6360071F039 /* TestViewController.m in Sources */,
 				06268B7F24D6B4D60071F039 /* MyCameraViewController.m in Sources */,
 				063F64BA24DC8B6C00E249C3 /* PHAsset+FetchImage.m in Sources */,

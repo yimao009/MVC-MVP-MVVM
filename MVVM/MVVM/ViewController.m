@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MVVMViewModel.h"
 #import "MVVMView.h"
+#import "LoginViewController.h"
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 static NSString *const reuserId = @"reuserId";
@@ -94,6 +95,12 @@ static NSString *const reuserId = @"reuserId";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0) {
+        LoginViewModel *loginViewModel = [[LoginViewModel alloc] initWithParams:@{@"title":@"MVMV"}];
+        LoginViewController *loginVC = [[LoginViewController alloc] initWithViewModel:loginViewModel];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        return;
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.vm.contentKey = self.dataArray[indexPath.row];
 }
