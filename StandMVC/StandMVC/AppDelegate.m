@@ -18,26 +18,57 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    NSUserDefaults *userDefulats = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.exam.StandMVC"];
+    [userDefulats setValue:@"hello" forKey:@"title"];
+    NSString *title = [userDefulats objectForKey:@"newkey"];
+    NSLog(@"%@", title);
+
     return YES;
 }
 
 
 #pragma mark - UISceneSession lifecycle
 
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation
+//{
+//        NSLog(@"%@",url);
+//    return YES;
+//}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//        NSLog(@"%@",url);
+//    return YES;
+//}
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    NSURL *fileURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.exam.StandMVC"];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.exam.StandMVC"];
+    NSString *title = [userDefaults objectForKey:@"newkey"];
+    NSArray *array = [userDefaults objectForKey:@"ShareDataKey"];
+    NSDictionary *dict = [array firstObject];
+    NSData *imgData = dict[@"imgData"];
+    NSString *urlStr = dict[@"URL"];
+    NSString *name = dict[@"name"];
+//    NSString *imgStr = dict[@"imgStr"];
+    NSError *error = nil;
+    NSURL *url1 = [NSURL URLWithString:urlStr];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:urlStr] options:NSDataReadingMappedIfSafe error:&error];
+    if (error) {
+        NSLog(@"err %@", error);
+    }
+//    NSData *data2 = [NSData dataWithContentsOfFile:urlStr];
+//    UIImage *img2 = [self Base64StrToUIImage:imgStr];
+    UIImage *img = [UIImage imageWithData:imgData];
+    NSLog(@"%@", title);
+    NSLog(@"%@",options);
+    return YES;
 }
 
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+//字符串转图片
+- (UIImage *)Base64StrToUIImage:(NSString *)_encodedImageStr
+{
+    NSData *_decodedImageData = [[NSData alloc] initWithBase64Encoding:_encodedImageStr];
+    UIImage *_decodedImage = [UIImage imageWithData:_decodedImageData];
+    return _decodedImage;
 }
-
-
 @end

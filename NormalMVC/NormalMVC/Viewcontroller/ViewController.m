@@ -29,13 +29,13 @@ static NSString *const reuserId = @"reuserId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self loadData];
-//    [self.view addSubview:self.tableView];
+    [self loadData];
+    [self.view addSubview:self.tableView];
 //
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationSAVE) name:@"saveSucessful" object:nil];
     
 //    [self testContentHugging];
-    [self testMasonryConstraints];
+//    [self testMasonryConstraints];
 }
 
 // 制造冲突
@@ -144,6 +144,10 @@ static NSString *const reuserId = @"reuserId";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"StandMVC://"]];
+}
 #pragma mark - MainViewDelegate
 
 - (void)mainView:(MainView *)mainView loadStr:(NSString *)str

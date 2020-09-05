@@ -101,6 +101,9 @@ static NSString *const reuserId = @"reuserId";
         [self.navigationController pushViewController:loginVC animated:YES];
         return;
     }
+    if (indexPath.row == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"StandMVC://"]];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.vm.contentKey = self.dataArray[indexPath.row];
 }

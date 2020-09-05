@@ -27,7 +27,6 @@
 		06B7229524DFBBF6001C9822 /* PHAssetCollection+Poster.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B7229424DFBBF6001C9822 /* PHAssetCollection+Poster.m */; };
 		06B7229824DFC02D001C9822 /* MyImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B7229724DFC02D001C9822 /* MyImagePreviewViewController.m */; };
 		06C3292E249A0377009D9337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C3292D249A0377009D9337 /* AppDelegate.m */; };
-		06C32931249A0377009D9337 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C32930249A0377009D9337 /* SceneDelegate.m */; };
 		06C32934249A0377009D9337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C32933249A0377009D9337 /* ViewController.m */; };
 		06C32937249A0377009D9337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C32935249A0377009D9337 /* Main.storyboard */; };
 		06C32939249A037A009D9337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06C32938249A037A009D9337 /* Assets.xcassets */; };
@@ -38,9 +37,48 @@
 		06F3777624FB563200DDBA2E /* WKBaseUSEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F3777424FB563200DDBA2E /* WKBaseUSEViewController.m */; };
 		06F3777924FB6CDD00DDBA2E /* QiLink.html in Resources */ = {isa = PBXBuildFile; fileRef = 06F3777824FB6CDD00DDBA2E /* QiLink.html */; };
 		06F3777C24FB6D2F00DDBA2E /* QiWKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F3777B24FB6D2F00DDBA2E /* QiWKDetailViewController.m */; };
+		06F377D125026D8B00DDBA2E /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F377D025026D8B00DDBA2E /* ShareViewController.m */; };
+		06F377D825026D8B00DDBA2E /* MyShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06F377CD25026D8B00DDBA2E /* MyShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06F377E325026E9600DDBA2E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F377E225026E9600DDBA2E /* NotificationCenter.framework */; };
+		06F377E725026E9600DDBA2E /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F377E625026E9600DDBA2E /* TodayViewController.m */; };
+		06F377EE25026E9600DDBA2E /* MyToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06F377E125026E9600DDBA2E /* MyToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06F377F525026F2700DDBA2E /* CustomShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F377F325026F2700DDBA2E /* CustomShareViewController.m */; };
+		06F377F625026F2700DDBA2E /* CustomShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F377F425026F2700DDBA2E /* CustomShareViewController.xib */; };
 		A9287F2E24CE6C3F008BF495 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9287F2D24CE6C3F008BF495 /* CustomViewController.m */; };
 		FA5E9CCC9DBA93B4328B758D /* libPods-StandMVC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E5821278A831C25E20903A /* libPods-StandMVC.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06F377D625026D8B00DDBA2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06C32921249A0377009D9337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F377CC25026D8B00DDBA2E;
+			remoteInfo = MyShare;
+		};
+		06F377EC25026E9600DDBA2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06C32921249A0377009D9337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F377E025026E9600DDBA2E;
+			remoteInfo = MyToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06F377D925026D8B00DDBA2E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				06F377EE25026E9600DDBA2E /* MyToday.appex in Embed App Extensions */,
+				06F377D825026D8B00DDBA2E /* MyShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06268B7724D65C540071F039 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -71,6 +109,7 @@
 		062C2F1F249FB689007E6444 /* MVTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVTableViewCell.m; sourceTree = "<group>"; };
 		063F64B824DC8B6C00E249C3 /* PHAsset+FetchImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHAsset+FetchImage.h"; sourceTree = "<group>"; };
 		063F64B924DC8B6C00E249C3 /* PHAsset+FetchImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+FetchImage.m"; sourceTree = "<group>"; };
+		067158A8250299A700FD2E44 /* MyToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyToday.entitlements; sourceTree = "<group>"; };
 		069CFAEB24C48E860096920A /* ToDoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		069CFAEC24C48E860096920A /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		069CFAEE24C48FC50096920A /* ToDoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListViewController.h; sourceTree = "<group>"; };
@@ -84,8 +123,6 @@
 		06C32929249A0377009D9337 /* StandMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StandMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C3292C249A0377009D9337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06C3292D249A0377009D9337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		06C3292F249A0377009D9337 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		06C32930249A0377009D9337 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		06C32932249A0377009D9337 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		06C32933249A0377009D9337 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		06C32936249A0377009D9337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +138,20 @@
 		06F3777824FB6CDD00DDBA2E /* QiLink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = QiLink.html; sourceTree = "<group>"; };
 		06F3777A24FB6D2E00DDBA2E /* QiWKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiWKDetailViewController.h; sourceTree = "<group>"; };
 		06F3777B24FB6D2F00DDBA2E /* QiWKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiWKDetailViewController.m; sourceTree = "<group>"; };
+		06F377CD25026D8B00DDBA2E /* MyShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F377CF25026D8B00DDBA2E /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		06F377D025026D8B00DDBA2E /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		06F377D525026D8B00DDBA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F377E125026E9600DDBA2E /* MyToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F377E225026E9600DDBA2E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		06F377E525026E9600DDBA2E /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		06F377E625026E9600DDBA2E /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		06F377EB25026E9600DDBA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F377F225026F2700DDBA2E /* CustomShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomShareViewController.h; sourceTree = "<group>"; };
+		06F377F325026F2700DDBA2E /* CustomShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomShareViewController.m; sourceTree = "<group>"; };
+		06F377F425026F2700DDBA2E /* CustomShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomShareViewController.xib; sourceTree = "<group>"; };
+		06F377F7250297A900DDBA2E /* MyShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyShare.entitlements; sourceTree = "<group>"; };
+		06F377F8250297BF00DDBA2E /* StandMVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StandMVC.entitlements; sourceTree = "<group>"; };
 		37C68FA04A0D2476C68A8371 /* Pods-StandMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StandMVC.release.xcconfig"; path = "Target Support Files/Pods-StandMVC/Pods-StandMVC.release.xcconfig"; sourceTree = "<group>"; };
 		A9287F2C24CE6C3F008BF495 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		A9287F2D24CE6C3F008BF495 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
@@ -114,6 +165,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5E9CCC9DBA93B4328B758D /* libPods-StandMVC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F377CA25026D8B00DDBA2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F377DE25026E9600DDBA2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F377E325026E9600DDBA2E /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				06C3292B249A0377009D9337 /* StandMVC */,
+				06F377CE25026D8B00DDBA2E /* MyShare */,
+				06F377E425026E9600DDBA2E /* MyToday */,
 				06C3292A249A0377009D9337 /* Products */,
 				5B12C90984418B8319B23253 /* Pods */,
 				913CDB368163167D309801DF /* Frameworks */,
@@ -178,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				06C32929249A0377009D9337 /* StandMVC.app */,
+				06F377CD25026D8B00DDBA2E /* MyShare.appex */,
+				06F377E125026E9600DDBA2E /* MyToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +255,7 @@
 		06C3292B249A0377009D9337 /* StandMVC */ = {
 			isa = PBXGroup;
 			children = (
+				06F377F8250297BF00DDBA2E /* StandMVC.entitlements */,
 				06F3776D24FB535900DDBA2E /* WKWebView */,
 				06268B8724D9B2080071F039 /* CustomAlbum */,
 				06268B7C24D6A47C0071F039 /* CustomCamera */,
@@ -194,8 +265,6 @@
 				06C32945249A1080009D9337 /* model */,
 				06C3292C249A0377009D9337 /* AppDelegate.h */,
 				06C3292D249A0377009D9337 /* AppDelegate.m */,
-				06C3292F249A0377009D9337 /* SceneDelegate.h */,
-				06C32930249A0377009D9337 /* SceneDelegate.m */,
 				06C32935249A0377009D9337 /* Main.storyboard */,
 				06C32938249A037A009D9337 /* Assets.xcassets */,
 				06C3293A249A037A009D9337 /* LaunchScreen.storyboard */,
@@ -260,6 +329,31 @@
 			path = WKWebView;
 			sourceTree = "<group>";
 		};
+		06F377CE25026D8B00DDBA2E /* MyShare */ = {
+			isa = PBXGroup;
+			children = (
+				06F377F7250297A900DDBA2E /* MyShare.entitlements */,
+				06F377CF25026D8B00DDBA2E /* ShareViewController.h */,
+				06F377D025026D8B00DDBA2E /* ShareViewController.m */,
+				06F377F225026F2700DDBA2E /* CustomShareViewController.h */,
+				06F377F325026F2700DDBA2E /* CustomShareViewController.m */,
+				06F377F425026F2700DDBA2E /* CustomShareViewController.xib */,
+				06F377D525026D8B00DDBA2E /* Info.plist */,
+			);
+			path = MyShare;
+			sourceTree = "<group>";
+		};
+		06F377E425026E9600DDBA2E /* MyToday */ = {
+			isa = PBXGroup;
+			children = (
+				067158A8250299A700FD2E44 /* MyToday.entitlements */,
+				06F377E525026E9600DDBA2E /* TodayViewController.h */,
+				06F377E625026E9600DDBA2E /* TodayViewController.m */,
+				06F377EB25026E9600DDBA2E /* Info.plist */,
+			);
+			path = MyToday;
+			sourceTree = "<group>";
+		};
 		5B12C90984418B8319B23253 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E5821278A831C25E20903A /* libPods-StandMVC.a */,
+				06F377E225026E9600DDBA2E /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,15 +386,52 @@
 				06C32926249A0377009D9337 /* Frameworks */,
 				06C32927249A0377009D9337 /* Resources */,
 				A91B793E24D2D51A00D1D26E /* Integrate Reveal Server */,
+				06F377D925026D8B00DDBA2E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				06F377D725026D8B00DDBA2E /* PBXTargetDependency */,
+				06F377ED25026E9600DDBA2E /* PBXTargetDependency */,
 			);
 			name = StandMVC;
 			productName = StandMVC;
 			productReference = 06C32929249A0377009D9337 /* StandMVC.app */;
 			productType = "com.apple.product-type.application";
+		};
+		06F377CC25026D8B00DDBA2E /* MyShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F377DC25026D8B00DDBA2E /* Build configuration list for PBXNativeTarget "MyShare" */;
+			buildPhases = (
+				06F377C925026D8B00DDBA2E /* Sources */,
+				06F377CA25026D8B00DDBA2E /* Frameworks */,
+				06F377CB25026D8B00DDBA2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyShare;
+			productName = MyShare;
+			productReference = 06F377CD25026D8B00DDBA2E /* MyShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		06F377E025026E9600DDBA2E /* MyToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F377EF25026E9600DDBA2E /* Build configuration list for PBXNativeTarget "MyToday" */;
+			buildPhases = (
+				06F377DD25026E9600DDBA2E /* Sources */,
+				06F377DE25026E9600DDBA2E /* Frameworks */,
+				06F377DF25026E9600DDBA2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyToday;
+			productName = MyToday;
+			productReference = 06F377E125026E9600DDBA2E /* MyToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -312,6 +444,12 @@
 				TargetAttributes = {
 					06C32928249A0377009D9337 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					06F377CC25026D8B00DDBA2E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					06F377E025026E9600DDBA2E = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
@@ -329,6 +467,8 @@
 			projectRoot = "";
 			targets = (
 				06C32928249A0377009D9337 /* StandMVC */,
+				06F377CC25026D8B00DDBA2E /* MyShare */,
+				06F377E025026E9600DDBA2E /* MyToday */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +484,21 @@
 				06268B7B24D65DE10071F039 /* CameraViewController.xib in Resources */,
 				06C32939249A037A009D9337 /* Assets.xcassets in Resources */,
 				06C32937249A0377009D9337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F377CB25026D8B00DDBA2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F377F625026F2700DDBA2E /* CustomShareViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F377DF25026E9600DDBA2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +588,6 @@
 				06268B9324DC419A0071F039 /* MyImagePickerCell.m in Sources */,
 				06268B8A24D9B2210071F039 /* CustomAlbumViewController.m in Sources */,
 				06B7229524DFBBF6001C9822 /* PHAssetCollection+Poster.m in Sources */,
-				06C32931249A0377009D9337 /* SceneDelegate.m in Sources */,
 				06B7229824DFC02D001C9822 /* MyImagePreviewViewController.m in Sources */,
 				062C2F1A249FB680007E6444 /* Model.m in Sources */,
 				06F3777C24FB6D2F00DDBA2E /* QiWKDetailViewController.m in Sources */,
@@ -444,7 +598,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06F377C925026D8B00DDBA2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F377D125026D8B00DDBA2E /* ShareViewController.m in Sources */,
+				06F377F525026F2700DDBA2E /* CustomShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F377DD25026E9600DDBA2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F377E725026E9600DDBA2E /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F377D725026D8B00DDBA2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F377CC25026D8B00DDBA2E /* MyShare */;
+			targetProxy = 06F377D625026D8B00DDBA2E /* PBXContainerItemProxy */;
+		};
+		06F377ED25026E9600DDBA2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F377E025026E9600DDBA2E /* MyToday */;
+			targetProxy = 06F377EC25026E9600DDBA2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		06C32935249A0377009D9337 /* Main.storyboard */ = {
@@ -582,11 +766,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_ENTITLEMENTS = StandMVC/StandMVC.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQF2D34SJB;
 				INFOPLIST_FILE = StandMVC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,16 +789,103 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U46PSBH7UR;
+				CODE_SIGN_ENTITLEMENTS = StandMVC/StandMVC.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StandMVC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zbj.StandMVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06F377DA25026D8B00DDBA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyShare/MyShare.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQF2D34SJB;
+				INFOPLIST_FILE = MyShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exam.StandMVC.MyShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06F377DB25026D8B00DDBA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyShare/MyShare.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MyShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exam.StandMVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06F377F025026E9600DDBA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyToday/MyToday.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VQF2D34SJB;
+				INFOPLIST_FILE = MyToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.exam.StandMVC.MyToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06F377F125026E9600DDBA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyToday/MyToday.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MyToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zbj.StandMVC.MyToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -635,6 +907,24 @@
 			buildConfigurations = (
 				06C32943249A037A009D9337 /* Debug */,
 				06C32944249A037A009D9337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F377DC25026D8B00DDBA2E /* Build configuration list for PBXNativeTarget "MyShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F377DA25026D8B00DDBA2E /* Debug */,
+				06F377DB25026D8B00DDBA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F377EF25026E9600DDBA2E /* Build configuration list for PBXNativeTarget "MyToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F377F025026E9600DDBA2E /* Debug */,
+				06F377F125026E9600DDBA2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
